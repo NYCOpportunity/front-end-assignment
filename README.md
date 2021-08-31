@@ -1,6 +1,6 @@
 # Front-end Assignment
 
-Create an **accessible form** that uses questions fetched from a REST endpoint. The questions will ask for **personally identifiable information** from public users who will fill it out. For this particular exercise the CSS styling of the form does not need to be considered. Create an application script in `js/default.js` using **JavaScript ES syntax**. Use as many native features as possible such as the [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) and **async**/**await**.
+Create an **accessible form** that uses questions fetched from a REST endpoint. The questions will ask for **personally identifiable information** from public users who will fill it out. For this particular exercise the CSS styling of the form does not need to be considered but the HTML layout will be. Create an application script in `js/default.js` using **JavaScript ES syntax**. Use as many native features as possible such as the [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) and **async**/**await**.
 
 ## Instructions
 
@@ -47,6 +47,7 @@ GET questions from the endpoint `https://putsreq.com/RWhI8ht10y5kqfmemrML`. The 
     "label": "Your Phone Number",
     "name": "contactPhone",
     "type": "tel",
+    "pattern": "[0-9]{10}",
     "required": 0
   },
   {
@@ -84,6 +85,7 @@ GET questions from the endpoint `https://putsreq.com/RWhI8ht10y5kqfmemrML`. The 
 * `label/legend` The plaintext label/legend content for the question’s input field.
 * `name` The name of the question’s input field.
 * `type` The type of the question’s input field.
+* `pattern` The question’s validation pattern.
 * `required`  Boolean value. Whether the question’s input field is required or not.
 * `options`  The values of a radio or checkbox question’s fieldset.
   * `id`  The ID of the option’s input field.
@@ -100,28 +102,28 @@ The form must be legible to screen readers. Proper ARIA labeling for invalid mes
 
 ### 3) Create the submission handler
 
-POST form submissions to the same endpoint (`https://putsreq.com/RWhI8ht10y5kqfmemrML`). A JSON object should be passed as the body of the request. **For the sake of this exercise**, any successful submission body `200` should match the following exactly otherwise it will return a client-side error `400`. The response status will be
+POST form submissions to the same endpoint (`https://putsreq.com/RWhI8ht10y5kqfmemrML`). A stringified JSON object should be passed as the body of the request. **For the sake of this exercise**, any successful submission body `200` should match the following exactly otherwise it will return a client-side error `400`.
 
 ```json
 [
   {
-    "id": "1111",
+    "name": "nameFirst",
     "value": "Jane"
   },
   {
-    "id": "2222",
+    "name": "nameLast",
     "value": "Doe"
   },
   {
-    "id": "3333",
+    "name": "contactPhone",
     "value": "9999999999"
   },
   {
-    "id": "4444",
+    "name": "contactEmail",
     "value": "jd@email.com"
   },
   {
-    "id": "5555",
+    "name": "contactPreferred",
     "value": "phone"
   }
 ]
@@ -133,7 +135,7 @@ If you would like to see what the form service looks like on the back-end, you c
 
 ## Wrapping Up
 
-Create a new GitHub repository for the completed challenge.
+Create a new GitHub repository for the completed challenge to share. Include any additional instructions needed to run the application.
 
 #### Think about the following items and be prepared to discuss in our interview.
 

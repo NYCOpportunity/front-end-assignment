@@ -2,49 +2,50 @@ response.status = 400;
 
 const FORM = [
   {
-    'id': '1111',
-    'label': 'First Name',
-    'name': 'nameFirst',
-    'type': 'text',
-    'required': 1
+    "id": "1111",
+    "label": "First Name",
+    "name": "nameFirst",
+    "type": "text",
+    "required": 1
   },
   {
-    'id': '2222',
-    'label': 'Last Name',
-    'name': 'nameLast',
-    'type': 'text',
-    'required': 1
+    "id": "2222",
+    "label": "Last Name",
+    "name": "nameLast",
+    "type": "text",
+    "required": 1
   },
   {
-    'id': '3333',
-    'label': 'Your Phone Number',
-    'name': 'contactPhone',
-    'type': 'tel',
-    'required': 0
+    "id": "3333",
+    "label": "Your Phone Number",
+    "name": "contactPhone",
+    "type": "tel",
+    "pattern": "[0-9]{10}",
+    "required": 0
   },
   {
-    'id': '4444',
-    'label': 'Your Email',
-    'name': 'contactEmail',
-    'type': 'email',
-    'required': 0
+    "id": "4444",
+    "label": "Your Email",
+    "name": "contactEmail",
+    "type": "email",
+    "required": 0
   },
   {
-    'id': '5555',
-    'legend': 'Your preferred contact',
-    'name': 'contactPreferred',
-    'type': 'radio',
-    'required': 1,
-    'options': [
+    "id": "5555",
+    "legend": "Your preferred contact",
+    "name": "contactPreferred",
+    "type": "radio",
+    "required": 1,
+    "options": [
       {
-        'id': '5555-1',
-        'label': 'Phone',
-        'value': 'phone'
+        "id": "5555-1",
+        "label": "Phone",
+        "value": "phone"
       },
       {
-        'id': '5555-2',
-        'label': 'Email',
-        'value': 'email'
+        "id": "5555-2",
+        "label": "Email",
+        "value": "email"
       }
     ]
   }
@@ -52,24 +53,24 @@ const FORM = [
 
 const FORM_DATA = [
   {
-    'id': '1111',
-    'value': 'Jane'
+    "name": "nameFirst",
+    "value": "Jane"
   },
   {
-    'id': '2222',
-    'value': 'Doe'
+    "name": "nameLast",
+    "value": "Doe"
   },
   {
-    'id': '3333',
-    'value': '9999999999'
+    "name": "contactPhone",
+    "value": "9999999999"
   },
   {
-    'id': '4444',
-    'value': 'jd@email.com'
+    "name": "contactEmail",
+    "value": "jd@email.com"
   },
   {
-    'id': '5555',
-    'value': 'phone'
+    "name": "contactPreferred",
+    "value": "phone"
   }
 ];
 
