@@ -24,7 +24,7 @@ This will start a simple Express app that will serve the contents of the [**./di
 
 ### 1) Fetch questions
 
-GET questions from the endpoint `https://putsreq.com/RWhI8ht10y5kqfmemrML`. The response will be:
+GET questions from the endpoint `https://mocki.io/v1/84954ef5-462f-462a-b692-6531e75c220d`. The response will be:
 
 ```json
 [
