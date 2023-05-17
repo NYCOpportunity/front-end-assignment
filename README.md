@@ -102,7 +102,7 @@ The form must be legible to screen readers. Proper ARIA labeling for invalid mes
 
 ### 3) Create the submission handler
 
-POST form submissions to the same endpoint (`https://putsreq.com/RWhI8ht10y5kqfmemrML`). A stringified JSON object should be passed as the body of the request. **For the sake of this exercise**, any successful submission body `200` should match the following exactly otherwise it will return a client-side error `400`.
+POST form submissions to this endpoint: `https://0211560d-577a-407d-94ab-dc0383c943e0.mock.pstmn.io/submitform`. A stringified JSON object should be passed as the body of the request, and the header should include `"Content-Type": "application/json"`. **For the sake of this exercise**, any successful submission body `200` should match the following exactly otherwise it will return a client-side error `404`.
 
 ```json
 [
